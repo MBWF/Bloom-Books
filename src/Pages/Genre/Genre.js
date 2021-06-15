@@ -1,11 +1,19 @@
 import React, { useEffect, useState } from 'react';
-import { getListNames } from '../../api';
+import axios from 'axios'
 import './styles.scss';
 
 function Genre() {
   const [listNames, setListNames] = useState([])
   useEffect(() => {
-    setListNames(getListNames())
+    async function fetchBooks() {
+      const res = await axios.get(
+        `https://api.nytimes.com/svc/books/v3/lists/names.json?api-key=${process.env.REACT_APP_BOOKS_API_KEY}`
+      )
+      setListNames(res.data.results)
+      console.log(res.data.results)
+    }
+
+    fetchBooks()
   }, [])
 
   return (
