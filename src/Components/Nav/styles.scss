@@ -1,0 +1,71 @@
+.top-menu {
+    nav {
+        background-color: #5062F0;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        height: 2em;
+    
+        h1 {
+            color: white;
+            font-size: 14pt;
+        }
+    
+        input {
+            margin-right: 12em;
+            border-radius: 10px;
+            border: none;
+            width: 22em;
+            height: 15px;
+            font-size: 6pt;
+            padding-left: 1em;
+        }
+    
+        input:focus {  
+            outline: none;
+        }
+    }
+
+    .organization {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 4em;
+        height: 2em;
+        background-color: #F2F3F8;
+
+        h2 {
+            font-size: 12pt;
+        }
+
+        .show {
+            display: flex;
+            align-items: center;
+            font-size: 6pt;
+
+            .number {
+                margin-right: 1em;
+                display: flex;
+                select {
+                    background-color: transparent;
+                    border: none;
+                    height: 10px;
+                    font-size: 6pt; 
+                }
+            }
+
+            .icons {
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                font-size: 12pt;
+                color: #D0D3E2;
+                #active {
+                    color: #5062F0;
+                }
+            }
+
+            
+        }
+    }
+}
