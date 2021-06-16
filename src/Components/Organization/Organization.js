@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from 'react';
-import { MdBorderAll } from 'react-icons/md'
-import { FiAlignJustify } from 'react-icons/fi'
+import React, { useState } from 'react';
+import { FiAlignJustify } from 'react-icons/fi';
+import { MdBorderAll } from 'react-icons/md';
 import './styles.scss';
 
-function Organization({listType}) {
+function Organization({listType, title}) {
 	const [list, setList] = useState(true)
   
   function typeList() {
@@ -15,11 +15,10 @@ function Organization({listType}) {
     listType(false)
     setList(false)
   }
-  useEffect(() => {console.log(list)}, [list])
 	
   return (
     <div className="organization" >
-    <h2>Gêneros</h2>
+    <h2>{title}</h2>
     <div className="show" >
       <div className="number" >
       Exibir

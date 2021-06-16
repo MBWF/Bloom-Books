@@ -8,6 +8,10 @@
         margin: 1em 0.2em;
         height: 20px;
         width: 1.6em;
+        .pagination__item--active {
+            background-color: #5062F0;
+            color: white;
+        } 
         button {
             cursor: pointer;
             height: 100%;

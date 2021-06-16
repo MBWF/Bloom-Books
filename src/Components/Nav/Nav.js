@@ -1,15 +1,13 @@
-import React, { useState } from 'react';
-import { AiFillStar } from 'react-icons/ai'
-
-
+import React from 'react';
+import { AiFillStar } from 'react-icons/ai';
+import { Link } from 'react-router-dom';
 import './styles.scss';
-import Organization from '../Organization/Organization';
 
 function Nav() {
   return (
     <div className="top-menu" >
       <nav>
-        <h1>Bloom Books</h1>
+        <Link to="/" style={{textDecoration: "none"}} ><h1>Bloom Books</h1></Link>
         <input type="text" placeholder="Pesquise aqui" />
         <AiFillStar style={{color: 'white'}} />
       </nav>

@@ -49,7 +49,7 @@ const Pagination = ({
         ))}
       <li>
         <button
-        className="proximo"
+          className="proximo"
           onClick={() => onPageChange(current + 1)}
           disabled={current === pages}
         >
