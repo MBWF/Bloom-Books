@@ -15,13 +15,13 @@ function Books() {
     <>
       <Nav /> 
       <Organization listType={setListOrganization} title={encodedName} />
-      {books ? (
-        <>
+      
+        <div className={listOrganization ? "cardBooksList" : "cardBooksBlock"} >
           {books.map(e => (
-            <div className="cardBooks" >
+            <div className="allBooks" >
               <img src={e.book_image} alt="" />
               <div className="booksInfos" >
-                <h4>{e.title} by {e.author} *</h4>
+                <h4>{e.title} by {e.author}</h4>
                 <p>{e.description}</p>
                 <p>Editora: {e.publisher}</p>
                 <p>Rank: {e.rank}</p>
@@ -29,14 +29,9 @@ function Books() {
               </div>
             </div>
           ))}
-        </>
-      )
-      :
-      <div />
-      }
-      
+        </div>
+     
     </>
-    
   )
 }
 

@@ -1,33 +1,78 @@
-.cardBooks {
+.cardBooksList {
+  .allBooks {
+    display: flex;
+    padding: 1em 4em;
+    img {
+      width: 4em;
+      height: 6em;
+      margin-right: 1.4em;
+    }
+  
+    .booksInfos {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      h4 {
+        font-size: 8pt;
+      }
+  
+      p {
+        font-size: 6.8pt;
+      }
+  
+      button {
+        width: 10em;
+        font-size: 6pt;
+        background-color: #5062F0;
+        border: 1px solid #5062F0;
+        border-radius: 10px;
+        color: white;
+        padding: 2.8px;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+
+
+.cardBooksBlock {
   display: flex;
   padding: 1em 4em;
-  img {
-    width: 4em;
-    height: 6em;
-    margin-right: 1.4em;
-  }
-
-  .booksInfos {
+  overflow-x: scroll;
+  .allBooks {
     display: flex;
+    margin-right: 2em;
     flex-direction: column;
     justify-content: space-between;
-    h4 {
-      font-size: 8pt;
+    img {
+      width: 4em;
+      height: 6em;
     }
-
-    p {
-      font-size: 6.8pt;
-    }
-
-    button {
-      width: 10em;
-      font-size: 6pt;
-      background-color: #5062F0;
-      border: 1px solid #5062F0;
-      border-radius: 10px;
-      color: white;
-      padding: 2.8px;
-      cursor: pointer;
+  
+    .booksInfos {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      h4 {
+        font-size: 8pt;
+      }
+  
+      p {
+        font-size: 6pt;
+      }
+  
+      button {
+        margin-top: 1em;
+        width: 10em;
+        font-size: 6pt;
+        background-color: #5062F0;
+        border: 1px solid #5062F0;
+        border-radius: 10px;
+        color: white;
+        padding: 2.8px;
+        cursor: pointer;
+      }
     }
   }
 }
