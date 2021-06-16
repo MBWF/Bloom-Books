@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios'
 import './styles.scss';
 import Pagination from '../../Components/Pagination/Pagination';
+import Organization from '../../Components/Organization/Organization';
 
 function Genre() {
   const [info, setInfo] = useState({});
@@ -9,8 +10,10 @@ function Genre() {
   const [offset, setOffset] = useState(0);
   const [totalItens, setTotalItens] = useState(0)
 
-
   const [listNames, setListNames] = useState([])
+
+  const [listOrganization, setListOrganization] = useState(true)
+
   useEffect(() => {
     async function fetchBooks() {
       const res = await axios.get(
@@ -24,8 +27,14 @@ function Genre() {
     fetchBooks()
   }, [])
 
+  useEffect(() => {
+    console.log(listOrganization)
+  }, [listOrganization])
+
   return (
-      <div className="genre" >
+    <>
+    <Organization listType={setListOrganization} />
+      <div className={listOrganization ? "genre" : "block"} >
         {listNames.map((e) => (
           <div key={Math.random()} className="all-genres" >
             <div className="names" >
@@ -38,7 +47,6 @@ function Genre() {
             </div>
         </div>
         ))}
-
         {totalItens != 0 && (
           <Pagination
           limit={5}
@@ -46,11 +54,12 @@ function Genre() {
           offset={offset}
           setOffset={setOffset}
         />
-        )}
+        )} 
+        </div>
+
         
-          
-          
-      </div>
+      
+      </>
   )
 }
 

@@ -26,46 +26,5 @@
         }
     }
 
-    .organization {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0 4em;
-        height: 2em;
-        background-color: #F2F3F8;
-
-        h2 {
-            font-size: 12pt;
-        }
-
-        .show {
-            display: flex;
-            align-items: center;
-            font-size: 6pt;
-
-            .number {
-                margin-right: 1em;
-                display: flex;
-                select {
-                    background-color: transparent;
-                    border: none;
-                    height: 10px;
-                    font-size: 6pt; 
-                }
-            }
-
-            .icons {
-                cursor: pointer;
-                display: flex;
-                align-items: center;
-                font-size: 12pt;
-                color: #D0D3E2;
-                #active {
-                    color: #5062F0;
-                }
-            }
-
-            
-        }
-    }
+    
 }
