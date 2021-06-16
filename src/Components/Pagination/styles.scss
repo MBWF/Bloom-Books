@@ -1,0 +1,25 @@
+.pagination {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+
+    li {
+        margin: 1em 0.2em;
+        height: 20px;
+        width: 1.6em;
+        button {
+            cursor: pointer;
+            height: 100%;
+            width: 100%;
+            background-color: transparent;
+            border: 1px solid #5062F0;
+            border-radius: 20px;
+            color: #5062F0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+    }
+}
